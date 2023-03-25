@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成績自動計算機</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sanitize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="title">
+            <h1>成績表</h1>
+        </div>
+        <div class="input-name">
+            <p>
+                名 前
+            </p>
+            <input type="text" class="name" id="name" tabindex="1">
+        </div>
+    </div>
+
+    <div class="main">
+        <p>
+            各科目の点数を入力し、「評価」ボタンを押してください
+        </p>
+
+        <div class="container">
+            <table>
+                <tbody>
+                    <tr>
+                        <th width="30%">科目</th>
+                        <th width="35%">点数</th>
+                        <th width="35%">評価</th>
+                    </tr>
+                    <tr>
+                        <td class="subject">
+                            国語
+                        </td>
+                        <td>
+                            <input type="number" class="point" max="100" min="0" step="1" tabindex="2">
+                            <div class="error">※半角数字 1~100まで</div>
+                        </td>
+                        <td>
+                            <div class="result"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="subject">
+                            数学
+                        </td>
+                        <td>
+                            <input type="number" class="point" max="100" min="0" step="1" tabindex="3">
+                            <div class="error">※半角数字 1~100まで</div>
+                        </td>
+                        <td>
+                            <div class="result"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="subject">
+                            英語
+                        </td>
+                        <td>
+                            <input type="number" class="point" max="100" min="0" step="1" tabindex="4">
+                            <div class="error">※半角数字 1~100まで</div>
+                        </td>
+                        <td>
+                            <div class="result"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="subject">
+                            理科
+                        </td>
+                        <td>
+                            <input type="number" class="point" max="100" min="0" step="1" tabindex="5">
+                            <div class="error">※半角数字 1~100まで</div>
+                        </td>
+                        <td>
+                            <div class="result"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="subject">
+                            社会
+                        </td>
+                        <td>
+                            <input type="number" class="point" max="100" min="0" step="1" tabindex="6">
+                            <div class="error">※半角数字 1~100まで</div>
+                        </td>  
+                        <td>
+                            <div class="result"> </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="inner">
+                <div class="note">
+                    <p>
+                        Tabキーで入力フォームが下に移動します<br>
+                        リセットボタンで内容がリセットされます
+                    </p>
+                </div>
+                <div class="button">
+                    <button type="button" id="btn">評価</button>
+                    <button type="button" id="reset">リセット</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
